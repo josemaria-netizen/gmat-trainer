@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>GMAT Trainer</title>
+  <meta name="description" content="Adaptive GMAT Focus practice: quant, verbal, and data insights with stats and score tracking.">
+  <meta name="theme-color" content="#1a1a19" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f9f9f7" media="(prefers-color-scheme: light)">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>GMAT Trainer</h1>
+    <span class="topbar-sub">Focus Edition</span>
+  </header>
+  <main id="view"></main>
+  <nav id="nav" class="bottom-nav">
+    <button class="nav-btn on" data-view="practice">
+      <span class="nav-ico">✏️</span>Practice
+    </button>
+    <button class="nav-btn" data-view="stats">
+      <span class="nav-ico">📊</span>Stats
+    </button>
+    <button class="nav-btn" data-view="tracker">
+      <span class="nav-ico">🎯</span>Tracker
+    </button>
+  </nav>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
