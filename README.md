@@ -81,3 +81,20 @@ Add entries to `js/bank-quant.js`, `js/bank-verbal.js`, or `js/bank-di.js`:
 ```
 
 Bump `VERSION` in `sw.js` whenever assets change so installed clients refresh.
+
+### Importing GMAT Club questions
+
+`scripts/scrape-gmatclub.mjs` walks the GMAT Club forum index pages (PS, DS,
+CR, RC), reads the first post of each thread, and writes bank-format entries
+to `data/gmatclub.json` with a `source` link per question:
+
+```sh
+npm run scrape -- --forum ps,ds,cr --pages 3 --limit 150
+# logged-in cookie reveals the hidden OA box on most threads:
+GMATCLUB_COOKIE='phpbb3_...=...' npm run scrape -- --forum ps
+```
+
+Entries whose stem, choices, or official answer could not be read confidently
+are flagged `needsReview: true`. Raw HTML is cached in `.cache/gmatclub/`.
+Scraped questions belong to GMAT Club and their authors; keep them for
+personal practice.

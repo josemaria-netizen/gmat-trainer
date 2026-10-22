@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node tests/engine.test.mjs",
-    "serve": "python3 -m http.server 8080"
+    "test": "node tests/engine.test.mjs && node tests/scraper.test.mjs",
+    "serve": "python3 -m http.server 8080",
+    "scrape": "node scripts/scrape-gmatclub.mjs"
   }
 }
